@@ -29,11 +29,11 @@ setup(
     keywords = "benefit microsimulation social tax",
     license = "http://www.fsf.org/licensing/licenses/agpl-3.0.html",
     license_files = ("LICENSE",),
-    url = "https://github.com/openfisca/country-template",
+    url = "https://github.com/openfisca/nsw-fisheries",
     include_package_data = True,  # Will read MANIFEST.in
     data_files = [
         (
-            "share/openfisca/openfisca-country-template",
+            "share/openfisca/openfisca-nsw-fisheries",
             ["CHANGELOG.md", "README.md"],
             ),
         ],
