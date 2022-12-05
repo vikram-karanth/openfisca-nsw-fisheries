@@ -1,0 +1,35 @@
+# Test files describe situations and their expected outcomes
+# We can run this test on our command line using `openfisca test movements.yaml`
+
+# - name: "Estuary movements within same estuary"
+#   period: 2022-11
+#   input:
+#     source_estuary: "Bega River"
+#     source_estuary_status: "open"
+#     source_status: 1
+#     destination_estuary: "Bega River"
+#     destination_estuary_status: "open"
+#   output:
+#     estuary_movement: "open"
+
+# - name: Estuary movements within same estuary test 2
+#   period: ETERNITY
+#   input:
+#     source_estuary: "Bega River"
+#     source_estuary_status: "closed"
+#     destination_estuary: "Bega River"
+#     destination_estuary_status: ["closed"]
+#     source_status: 1
+#   output:
+#     estuary_movement: array(['closed'], dtype=object)
+
+- name: "Estuary movements source estuary closed"
+  period: 2022-11
+  input:
+    source_estuary: "Bega River"
+    source_estuary_status: "closed"
+    destination_estuary: "Bellinger River"
+    destination_estuary_status: 0
+    source_status: 0
+  output:
+    estuary_movement: 0
